@@ -39,7 +39,7 @@ render() {
         <Row>
           <AppBar position="sticky">
             <Toolbar>
-              <Typography variant="title" color="inherit">Aplicación climática</Typography>
+              <Typography variant="title" color="inherit">Aplicación del clima</Typography>
             </Toolbar>
           </AppBar>
         </Row>
