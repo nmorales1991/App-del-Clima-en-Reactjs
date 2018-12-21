@@ -8,6 +8,7 @@ import LocationList from './components/LocationList';
 import {Grid,Col,Row} from 'react-flexbox-grid';
 import ForecastExtended from './components/ForecastExtended';
 import { createStore } from 'redux';
+import {setCity} from './actions';
 const ciudades = [
   'Talca,cl',
   'San Carlos,cl',
@@ -19,7 +20,6 @@ const ciudades = [
 ]
 const store = createStore(()=>{}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-const setCity = value => ({ type:'setCity',value});
 class App extends Component {
 
 constructor(){
