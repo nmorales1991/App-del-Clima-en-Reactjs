@@ -20,7 +20,7 @@ LocationListContainer.propTypes = {
     dispatchSetCity : PropTypes.func.isRequired,
     ciudades : PropTypes.array.isRequired,
 };
-const mapDispatchToProps = (dispatch) =>({
+const mapDispatchToProps = (dispatch) =>({//retornar un objeto con funciones que luego se mapearán en el connect en el props (funciones)
 	dispatchSetCity: value => dispatch(setCity(value))
 });
 
