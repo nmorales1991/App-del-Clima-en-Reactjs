@@ -11,7 +11,7 @@ class LocationListContainer extends Component {
     
     render() {
         return (
-            <LocationList ciudades={this.props.ciudades} onSelectedLocation={this.handleSelectionLocation}></LocationList>
+            <LocationList ciudades={this.props.ciudades} onSelectedLocation={this.handleSelectionLocation}></LocationList>// el componente tiene 2 propiedades: ciudades con una lista de ciudades y onselectedlocation con una función guardada en una constante llamada handleSelectionLocation, ahora voy a LocationList.js
         );
     }
 }
