@@ -14,7 +14,7 @@ const LocationList = ({ciudades,onSelectedLocation}) =>{// acá vienen las 2 pro
         <WeatherLocation //por cada ciudad se crea un componente WeatherLocation, el cual tiene 3 propiedades, entre ellas una propiedad que tiene una función, la cual es la de arriba clickWeatherLocation, la cual viene de LocationListContainer.js y se le envía una ciudad como parámetro
             key={ciudad} 
             ciudad={ciudad}
-            clickLocation={()=>clickWeatherLocation(ciudad)}/>))
+            clickLocation={()=>clickWeatherLocation(ciudad)}/>))//ir a weatherLocation para ver el onclick
     )
     return(<div className="locationList">
         {strToComponents(ciudades)}

@@ -41,7 +41,7 @@ class WeatherLocation extends Component {
     render(){
         const {clickLocation} = this.props;
         const {ciudad, data} = this.state;
-        return(
+        return(//acá se hace el onclick, el cual tiene una propiedad clickLocation, la cual guarda todas las propiedades de este componente
             <div className="weatherLocationCont" onClick={clickLocation}>
                 <Location ciudad={ciudad}></Location>
                 {data ? <WeatherData data={data}></WeatherData>: <CircularProgress size={50}/>}
