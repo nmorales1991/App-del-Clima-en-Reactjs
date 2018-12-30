@@ -21,7 +21,7 @@ LocationListContainer.propTypes = {
     ciudades : PropTypes.array.isRequired,
 };
 const mapDispatchToProps = (dispatch) =>({//retornar un objeto con funciones que luego se mapearán en el connect en el props (funciones), la función dispatch viene del Provider(store)
-	dispatchSetCity: value => dispatch(setCity(value)) //dipatchSetCity queda como un props, el cual tiene una función que recibe un valor y devuelve un dispatch(disparador) con la función setCity que está en actions.js
+    dispatchSetCity: value => dispatch(setCity(value)) //dipatchSetCity queda como un props, el cual tiene una función que recibe un valor y devuelve un dispatch(disparador) con la función setCity que está en actions.js
 });// se "inyecta" el creador de acciones setCity en mapDispatchToProps, el cual después englobará este componente
 console.log("location list container")
 console.log(mapDispatchToProps)

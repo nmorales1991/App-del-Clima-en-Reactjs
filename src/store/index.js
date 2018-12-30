@@ -1,10 +1,13 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk'
 import {ciudad} from './../reducers/ciudad';
-console.log("store")
-console.log(ciudad)
+
 const initialState = {
     ciudad: 'Talca, cl',
     hola:"chao"
 };//creo un objeto para el estado inicial
 
-export const store = createStore(ciudad, initialState,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());//creo el store con la ciudad inicial cuando se inicia la aplicación
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;//devtool
+
+export const store = createStore(ciudad, initialState,composeEnhancers(applyMiddleware(thunk)));//creo el store con la ciudad inicial cuando se inicia la aplicación
+//ingreso el middleware al createStore, usando el devtool, si no lo quiero usar solo pongo applyMiddleware(thunk)
