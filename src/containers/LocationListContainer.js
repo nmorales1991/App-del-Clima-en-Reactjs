@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {setCity} from './../actions';
+import {setSeletedCity} from './../actions';
 import LocationList from './../components/LocationList';
 
 class LocationListContainer extends Component {
@@ -21,7 +21,7 @@ LocationListContainer.propTypes = {
     ciudades : PropTypes.array.isRequired,
 };
 const mapDispatchToProps = (dispatch) =>({//retornar un objeto con funciones que luego se mapearán en el connect en el props (funciones), la función dispatch viene del Provider(store)
-    dispatchSetCity: value => dispatch(setCity(value)) //dipatchSetCity queda como un props, el cual tiene una función que recibe un valor y devuelve un dispatch(disparador) con la función setCity que está en actions.js
+    dispatchSetCity: value => dispatch(setSeletedCity(value)) //dipatchSetCity queda como un props, el cual tiene una función que recibe un valor y devuelve un dispatch(disparador) con la función setCity que está en actions.js
 });// se "inyecta" el creador de acciones setCity en mapDispatchToProps, el cual después englobará este componente
 
 export default connect(null,mapDispatchToProps)(LocationListContainer);//connect envuelve el componente para que pueda conectarse al store
