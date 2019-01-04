@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 class ForecastExtendedContainer extends Component {
     
     render() {
-        console.log(this.props)//esto viene del reducer y se inyecta en el mapStateToProps
+        //console.log(this.props)//esto viene del reducer y se inyecta en el mapStateToProps
         return (
             this.props.ciudad &&
             <ForecastExtended ciudad = {this.props.ciudad} />

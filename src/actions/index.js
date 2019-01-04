@@ -14,8 +14,7 @@ export const fetchForecast = payload => {
         }).then(
             //modificar el estado con el resultado de la promise
             data =>{
-                const forecastData = transformForecast(data);
-            }
+                const forecastData = transformForecast(data);            }
         )
     };
 };

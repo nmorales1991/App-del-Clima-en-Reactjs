@@ -8,7 +8,7 @@ import LocationListContainer from './containers/LocationListContainer';
 import {Grid,Col,Row} from 'react-flexbox-grid';
 import ForecastExtendedContainer from './containers/ForecastExtendedContainer';
 
-console.log("app.js")
+//console.log("app.js")
 
 const ciudades = [
   'Talca,cl',
@@ -17,7 +17,8 @@ const ciudades = [
   'Paris',
   'Roma',
   'Barcelona',
-  'Bogota'
+  'Bogota',
+  'Lima'
 ]
 
 class App extends Component {
